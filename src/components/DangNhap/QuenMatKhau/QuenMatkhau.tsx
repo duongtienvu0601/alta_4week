@@ -1,4 +1,4 @@
-import { memo, useState} from 'react';
+import { memo, useState } from 'react';
 import type { FC } from 'react';
 import { ReactComponent as MySVG } from '../../../img/Frame.svg';
 import classes from '../QuenMatKhau/QuenMatKhau.module.css';
@@ -24,9 +24,8 @@ export const QuenMatKhau: FC<Props> = memo(function QuenMatKhau(props = {}) {
             </div>
           </div>
           <div>
-            <button className={classes.ButtonHuy}>Hủy</button>
-            <button className={classes.ButtonTiepTuc}>Tiếp tục</button>
-
+            <button className={classes.ButtonHuy} onClick={() => { window.location.href = '/DangNhap' }}>Hủy</button>
+            <button className={classes.ButtonTiepTuc} onClick={() => { window.location.href = '/DatLaiMatKhau' }}>Tiếp tục</button>
           </div>
           <LogoAlta
             className={classes.logoAlta}

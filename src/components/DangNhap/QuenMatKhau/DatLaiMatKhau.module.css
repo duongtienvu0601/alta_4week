@@ -1,0 +1,201 @@
+:root {
+    --red: #E73F3F;
+    --gray: #D4D4D7;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    padding: 0 0 0 0px;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+}
+
+.passContainer {
+    position: absolute;
+    width: 400px;
+    height: 74px;
+    left: 94px;
+    top: 365px;
+}
+
+.resetContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    position: absolute;
+    width: 400px;
+    height: 75px;
+    left: 94px;
+    top: 456px;
+}
+
+.passInputReset {
+    width: 75px;
+    height: 27px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #37474F;
+}
+
+.logoAlta.logoAlta {
+    position: absolute;
+    width: 170px;
+    height: 136px;
+    left: 175px;
+    top: 82px;
+}
+
+.group.group {
+    left: 0.4792px;
+    width: 169.5208px;
+    height: 135.9568px;
+}
+
+.group {
+    left: 0.4792px;
+    width: 169.5208px;
+    height: 135.9568px;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+}
+
+.icon2 {
+    width: 100%;
+    height: 100%;
+}
+
+.groupImage {
+    width: 988px;
+    height: 100vh;
+    margin: 0 0 0 530px;
+    padding: 112.9px 79px 83px 33px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    animation: slide-left 1s ease-out;
+    position: fixed;
+
+    @keyframes slide-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-160%);
+        }
+    }
+
+}
+
+.TextReset {
+    position: absolute;
+    left: 10.75%;
+    right: 71.6%;
+    top: 39.51%;
+    bottom: 56.42%;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #282739;
+}
+
+.matKhau {
+    width: 75px;
+    height: 27px;
+    left: 94px;
+    top: 365px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #37474F;
+}
+
+.matKhauReset {
+    width: 146px;
+    height: 27px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #37474F;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.resetPass {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height, or 150% */
+
+
+    color: #37474F;
+}
+
+.inputPass {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 10px 12px;
+    gap: 10px;
+    width: 400px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+}
+
+.IconShow {
+    box-sizing: border-box;
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    top: 56.32%;
+    bottom: 20.31%;
+}
+
+.buttonConfirm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    width: 162px;
+    height: 40px;
+    left: 205px;
+    top: 579px;
+    border: #FF9138;
+    background: #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+    color: #fff;
+}

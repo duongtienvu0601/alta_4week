@@ -21,19 +21,17 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
   const [passFogot, setPassFogot] = useState(true);
   const [showPass, setShowPass] = useState(false);
 
-  const handleLogin = () => {
+const handleLogin = () => {
     if (hasClicked) {
       window.location.reload();
-    } else if (username === 'admin' && password === 'password') {
-      window.location.href = "https://www.google.com";
+    } else if (username === "admin" && password === "password") {
+      window.location.href = "/home";
     } else {
       setHasClicked(true);
       setErrorMessage(true);
       setPassFogot(false);
     }
   }
-
-
 
   return (
     <div 
@@ -102,8 +100,6 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
           }}
         />
         </div>
-
-
         <div className={`${classes.groupImage} ${classes.groupImageNew}`}>
           <GroupPeopleIcon className={classes.icon2} />
           <div className={classes.heThong}>
