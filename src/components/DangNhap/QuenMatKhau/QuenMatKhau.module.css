@@ -1,0 +1,181 @@
+:root {
+    --red: #E73F3F;
+    --gray: #D4D4D7;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    padding: 0 0 0 0px;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+}
+
+
+.logoAlta.logoAlta {
+    position: absolute;
+    width: 170px;
+    height: 136px;
+    left: 175px;
+    top: 82px;
+}
+
+.group.group {
+    left: 0.4792px;
+    width: 169.5208px;
+    height: 135.9568px;
+}
+
+.group {
+    left: 0.4792px;
+    width: 169.5208px;
+    height: 135.9568px;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+}
+
+.root {
+    display: flow-root;
+    position: relative;
+    width: 1650px;
+    height: 780px;
+    align-items: flex-start;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+}
+
+.icon2 {
+    width: 100%;
+    height: 100%;
+}
+
+.groupImage {
+    width: 988px;
+    height: 100vh;
+    margin: 0 0 0 530px;
+    padding: 112.9px 79px 83px 33px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    animation: slide-left 1s ease-out;
+    position: fixed;
+
+    @keyframes slide-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-160%);
+        }
+    }
+
+}
+
+.RePass {
+    position: absolute;
+    left: 11.51%;
+    right: 70.68%;
+    top: 39.51%;
+    bottom: 57.53%;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #282739;
+}
+
+.RePassMail {
+    position: absolute;
+    width: 400px;
+    height: 27px;
+    left: 94px;
+    top: 330px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #37474F;
+}
+
+.TextReMail {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 270px 10px 12px;
+    position: absolute;
+    width: 360px;
+    height: 44px;
+    left: 94px;
+    top: 391px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    background: #FFFFFF;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+}
+
+.ButtonHuy {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    left: 105px;
+    top: 483px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FF9138;
+    border: 1px solid #FF9138;
+    filter: drop-shadow(0px 0px 6px #E7E9F2);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.ButtonTiepTuc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+    border: none;
+    color: white;
+    position: absolute;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    width: 160px;
+    height: 40px;
+    left: 284px;
+    top: 483px;
+    background: #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+}

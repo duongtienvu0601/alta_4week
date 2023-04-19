@@ -1,5 +1,6 @@
-:root{
+:root {
   --red: #E73F3F;
+  --gray: #D4D4D7;
 }
 
 .main {
@@ -16,6 +17,7 @@
 .button2.button2 {
   left: 215px;
   top: 511px;
+  cursor: pointer;
   width: 162px;
   place-content: center;
   background-color: #ff9138;
@@ -36,8 +38,7 @@
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  outline: solid 1.5px #4277ff;
-  outline-offset: -2px;
+  border: 1.5px solid var(--gray);
   border-radius: 8px;
   background-color: #fff;
   overflow: hidden;
@@ -46,6 +47,7 @@
   font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
 }
+
 .loginInputError {
   width: 100%;
   height: 44px;
@@ -82,14 +84,14 @@
   align-items: center;
   padding: 15px;
   box-sizing: border-box;
-  outline: solid 1.5px #4277ff;
-  outline-offset: -1px;
+  border: 1.5px solid var(--gray);
   border-radius: 8px;
   background-color: #fff;
   font-size: larger;
   font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
 }
+
 .passInputError {
   width: 100%;
   height: 44px;
@@ -105,6 +107,29 @@
     'Liberation Sans', sans-serif;
 }
 
+.passInputCustom {
+  width: 90%;
+  border: none;
+  font-size: medium;
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  -webkit-text-security: disc;
+}
+
+.passInputCustomShow {
+  width: 90%;
+  border: none;
+  font-size: medium;
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.passInputCustom:focus,
+.passInputCustomShow:focus {
+  outline: none;
+}
+
+
 .button {
   color: #fff;
   font-size: 16px;
@@ -116,6 +141,7 @@
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .logoAlta.logoAlta {
@@ -125,7 +151,6 @@
   width: 170px;
   height: 136px;
 }
-
 .group.group {
   left: 0.4792px;
   width: 169.5208px;
@@ -151,8 +176,6 @@
   align-items: flex-start;
   border-radius: 16px;
   background-color: #f6f6f6;
-  /* overflow: hidden; */
-  /* overflow-y: unset; */
 }
 
 
@@ -271,6 +294,21 @@
     }
   }
 
+}
+
+.RePass {
+  position: absolute;
+  left: 11.51%;
+  /* right: 70.68%; */
+  top: 39.51%;
+  bottom: 57.53%;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+
+  color: #282739;
 }
 
 .heThong {

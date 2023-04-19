@@ -1,11 +1,11 @@
-import { memo, useState,useRef } from 'react';
+import { memo, useState } from 'react';
 import type { FC } from 'react';
-import resets from '../_resets.module.css';
 import classes from './DangNhap.module.css';
 import { ButtonLogin } from './ButtonLogin/ButtonLogin';
 import { GroupPeopleIcon } from './GroupPeopleIcon';
 import { GroupIcon } from './GroupIcon';
 import { LogoAlta } from '../LogoAlta/LogoAlta';
+import { UEyeSlash } from './UEyeSlash/UEyeSlash';
 
 interface Props {
   className?: string;
@@ -19,7 +19,7 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
   const [errorMessage, setErrorMessage] = useState(false);
   const [hasClicked, setHasClicked] = useState(false);
   const [passFogot, setPassFogot] = useState(true);
-
+  const [showPass, setShowPass] = useState(false);
 
   const handleLogin = () => {
     if (hasClicked) {
@@ -49,13 +49,23 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
         </div>
         <div className={classes.passContainer}>
           <div className={classes.matKhau}>Mật khẩu *</div>
-          <input type="password" className={errorMessage ? classes.passInputError : classes.passInput} value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        <a href='/quenmatkhau'  className={passFogot ? classes.passMessageBefore : classes.passMessageAfter}>
-            Quên mật khẩu?
-        </a>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center'
+          }} 
+          className={errorMessage ? classes.passInputError : classes.passInput}
+          >
+            <input  className={showPass === false ? classes.passInputCustom : classes.passInputCustomShow}  />
+            <UEyeSlash onClick={() => {
+                setShowPass(!showPass)
+            }} />
+          </div>
 
-        
+        </div>
+        <a href='/quenmatkhau'  style={{ textDecoration: 'none' }}  className={passFogot ? classes.passMessageBefore : classes.passMessageAfter}>
+            Quên mật khẩu?  
+        </a>
         {errorMessage && <div className={classes.errorMessage}>
           <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_84_5581)">
@@ -76,7 +86,7 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
         <ButtonLogin
           className={classes.button2}
           text={{
-            button: <div className={classes.button}>Đăng nhập</div>,
+            button: <p className={classes.button}>Đăng nhập</p>,
           }}
           onClick={handleLogin}
         />

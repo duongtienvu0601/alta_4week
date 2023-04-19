@@ -4,6 +4,7 @@
   height: 24px;
   align-items: flex-start;
   overflow: hidden;
+  cursor: pointer;
 }
 .vector {
   position: absolute;
