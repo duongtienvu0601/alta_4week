@@ -1,0 +1,38 @@
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.resets.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.resets.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.logout {
+    color: #ff0000;
+    font-weight: bold;
+}
