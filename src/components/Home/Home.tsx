@@ -1,19 +1,17 @@
-import { memo} from 'react';
-import type { FC } from 'react';
-
+import { memo } from "react";
+import type { FC } from "react";
+import classes from "./Home.module.css";
+import { Menubar } from "../MenuBar/Menubar";
 interface HomeProps {
-    className?: string;
+  className?: string;
 }
 
 const Home: FC<HomeProps> = memo(function Home(props = {}) {
-    const { className } = props;
-
-    return (
-        <div className={className}>
-           <div>This is Home</div>
-        </div>
-    );
+  return (
+    <div className={classes.main}>
+      <Menubar />
+    </div>
+  );
 });
 
 export default Home;
-

@@ -2,7 +2,6 @@ import React from 'react';
 import { Route,Routes,  createBrowserRouter,
   RouterProvider, } from 'react-router-dom';
 import { DangNhap } from './components/DangNhap/DangNhap';
-import {Menubar} from './components/MenuBar/Menubar'
 import Home from './components/Home/Home';
 import { DatLaiMatKhau } from './components/DangNhap/QuenMatKhau/DatLaiMatKhau';
 import { QuenMatKhau } from './components/DangNhap/QuenMatKhau/QuenMatkhau';
