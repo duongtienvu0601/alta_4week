@@ -18,7 +18,6 @@ interface Props {
 export const ButtonLogin: FC<Props> = memo(function ButtonLogin(props = {}) {
   const handleLogin = () => {
     if (props.navigateTo) {
-      // navigate to the specified component
       
     }
     if (props.onClick) {

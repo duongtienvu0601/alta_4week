@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route,Routes,  createBrowserRouter,
+import {createBrowserRouter,
   RouterProvider, } from 'react-router-dom';
 import { DangNhap } from './components/DangNhap/DangNhap';
-import Home from './components/Home/Home';
+import Profile from './components/Home/Profile';
 import { DatLaiMatKhau } from './components/DangNhap/QuenMatKhau/DatLaiMatKhau';
 import { QuenMatKhau } from './components/DangNhap/QuenMatKhau/QuenMatkhau';
 import { Provider } from 'react-redux';
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
     element: <QuenMatKhau/>,
   },
   {
-    path: "/home",
-    element: <Home/>,
+    path: "/profile",
+    element: <Profile/>,
   },
   {
     path:"/datlaimatkhau",

@@ -20,8 +20,10 @@
     height: 64px;
     left: 60px;
     top: 32px;
+    cursor: pointer;
 }
 
+/* Dashboard */
 .DashboardItem {
     /* Auto layout */
 
@@ -57,6 +59,65 @@
     background: #FFF2E7;
 }
 
+.IconBang {
+    width: 20px;
+    height: 20px;
+
+
+    /* Inside auto layout */
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* thiết bị*/
+.ThietbiItem {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 12px;
+    gap: 10px;
+
+    position: absolute;
+    width: 200px;
+    height: 48px;
+    left: 0px;
+    top: 204px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.ThietbiItem:hover {
+    color: #FF7506;
+    background: #FFF2E7;
+    width: 176px;
+    height: 48px;
+}
+
+.ThietbiItem:hover .text {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
+.ThietbiItem:hover .IconThietbi path {
+    stroke: #FF7506;
+    background: #FFF2E7;
+}
+
+.IconThietbi {
+    width: 20px;
+    height: 20px;
+    /* Inside auto layout */
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
 .text {
 
     width: 80px;
@@ -85,45 +146,15 @@
 }
 
 
-.IconBang {
-    width: 20px;
-    height: 20px;
-
-
-    /* Inside auto layout */
-    color: #7E7D88;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-
-
-
-.ThietbiItem {
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px 12px;
-    gap: 10px;
-
-    position: absolute;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 204px;
-}
-
 .DichvuItem {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 0px 12px;
     gap: 10px;
 
     position: absolute;
+    cursor: pointer;
     width: 200px;
     height: 48px;
     left: 0px;
@@ -131,14 +162,51 @@
 
 }
 
+.DichvuItem:hover {
+    color: #FF7506;
+    background: #FFF2E7;
+    width: 176px;
+    height: 48px;
+}
+
+.IconDichvu {
+    width: 20px;
+    height: 20px;
+    /* Inside auto layout */
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.DichvuItem:hover .text {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
+.DichvuItem:hover .IconDichvu path {
+    stroke: #FF7506;
+    stroke-width: 1px;
+}
+
+.DichvuItem:hover .IconDichvu circle {
+    stroke: #FF7506;
+    stroke-width: 1px;
+}
+
+
+
+
+
 .CapsoItem {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 0px 12px;
     gap: 10px;
 
     position: absolute;
+    cursor: pointer;
     width: 200px;
     height: 48px;
     left: 0px;
@@ -146,19 +214,77 @@
 
 }
 
+.CapsoItem:hover {
+    color: #FF7506;
+    background: #FFF2E7;
+    width: 176px;
+    height: 48px;
+}
+
+.IconCapso {
+    width: 20px;
+    height: 20px;
+    /* Inside auto layout */
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.CapsoItem:hover .text {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
+.CapsoItem:hover .IconCapso {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
 .BaocaoItem {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 0px 12px;
     gap: 10px;
 
     position: absolute;
+    cursor: pointer;
     width: 200px;
     height: 48px;
     left: 0px;
     top: 366px;
 }
+
+.BaocaoItem:hover {
+    color: #FF7506;
+    background: #FFF2E7;
+    width: 176px;
+    height: 48px;
+}
+
+.IconBaocao {
+    width: 20px;
+    height: 20px;
+    /* Inside auto layout */
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.BaocaoItem:hover .text {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
+.BaocaoItem:hover .IconBaocao path{
+    fill: #FF7506;
+    stroke-opacity: inherit;
+    stroke: #FF7506;
+}
+
+
 
 .frameLogout {
     position: absolute;
@@ -168,6 +294,90 @@
     top: 632px;
 
 }
+
+.DropdownItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 8px;
+
+    position: absolute;
+    cursor: pointer;
+    width: 200px;
+    height: 48px;
+    left: 0px;
+    top: 420px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.DropdownItem:hover .ThreeDot path {
+    fill: #FF7506;
+    stroke: #FF7506;
+}
+
+.DropdownItem:hover .IconSetting path {
+    fill: #FF7506;
+    stroke: #FF7506;
+}
+
+/* hover toàn bộ */
+.DropdownItem:hover {
+    color: #FF7506;
+    background: #FFF2E7;
+    width: 192px;
+    height: 48px;
+}
+
+.IconSetting {
+    width: 20px;
+    height: 20px;
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.DropdownItem:hover .textCaidat {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
+.DropdownItem:hover .IconSetting {
+    fill-opacity: #FF7506;
+    background: #FFF2E7;
+}
+
+
+
+
+.ThreeDot {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.textCaidat {
+    width: 128px;
+    height: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7D88;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+
 
 .logoutButton {
     /* Auto layout */

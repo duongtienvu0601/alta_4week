@@ -1,0 +1,383 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  padding: 0 0 0 0px;
+  border-radius: 16px;
+  background-color: #f6f6f6;
+}
+
+.TopBar {
+  position: absolute;
+  width: 1240px;
+  height: 88px;
+  left: 200px;
+  top: 0px;
+
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 8px 10px 0px;
+  gap: 8px;
+
+  position: absolute;
+  width: 176px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+
+  border-radius: 8px;
+
+
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+
+
+  color: #FF9138;
+
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.avatarFrame {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 172px;
+  height: 42px;
+  left: 1004px;
+  top: 24px;
+
+}
+
+.imgAvatar {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 132px;
+  top: 14px;
+  border-radius: 48px;
+}
+
+.TextName {
+  position: absolute;
+  width: 126px;
+  height: 42px;
+  left: 48px;
+  top: 0px;
+}
+
+.textname {
+  position: absolute;
+  width: 47px;
+  height: 18px;
+  right: 77px;
+  top: 0px;
+
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #7E7D88;
+}
+
+.name {
+  position: absolute;
+  width: 126px;
+  height: 24px;
+  right: -2px;
+  top: 18px;
+
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #535261;
+}
+
+.frameBell {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 260px;
+  top: 40px;
+  cursor: pointer;
+  background: #FFF2E7;
+  border-radius: 32px;
+}
+
+.Bell {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 6px;
+  top: 6px;
+}
+
+.ProfileFrame {
+  position: absolute;
+  width: 1112px;
+  height: 397px;
+  left: 224px;
+  top: 168px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProfileAvatarFrame {
+  position: absolute;
+  width: 248px;
+  height: 303px;
+  left: 24px;
+  top: 40px;
+}
+
+.Avatar {
+  position: absolute;
+  width: 248px;
+  height: 248px;
+  left: 24px;
+  top: 15px;
+  cursor: pointer;
+  border-radius: 318px;
+}
+
+.textAvatar {
+  position: absolute;
+  width: 186px;
+  height: 36px;
+  left: 65px;
+  top: 280px;
+
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+
+  color: #282739;
+
+  justify-content: center;
+}
+
+.FrameData {
+  position: absolute;
+  width: 792px;
+  height: 276px;
+  left: 296px;
+  top: 40px;
+}
+
+.text2 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+
+  /* Gray/$-gray-500 */
+
+  color: #282739;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.frameTenDangnhap {
+  position: absolute;
+  width: 384px;
+  height: 76px;
+  left: 296px;
+  top: 40px;
+
+}
+
+.profileName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 1px;
+  top: 62px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.profileSDT {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 1px;
+  top: 150px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.profilePass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 409px;
+  top: 150px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.profileEmail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 1px;
+  top: 242px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.profileRole {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 409px;
+  top: 242px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.profileUsername {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 350px;
+  height: 24px;
+  left: 409px;
+  top: 62px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  background: #EAEAEC;
+  border-radius: 6px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

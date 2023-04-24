@@ -15,7 +15,6 @@ export const DatLaiMatKhau: FC<Props> = memo(function DatLaiMatKhau(
   props = {}
 ) {
   const [showPass, setShowPass] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(false);
   return (
     <div className={classes.main}>
       <div>
