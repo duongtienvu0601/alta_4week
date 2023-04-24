@@ -24,7 +24,7 @@ export const QuenMatKhau: FC<Props> = memo(function QuenMatKhau(props = {}) {
             </div>
           </div>
           <div>
-            <button className={classes.ButtonHuy} onClick={() => { window.location.href = '/DangNhap' }}>Hủy</button>
+            <button className={classes.ButtonHuy} onClick={() => { window.location.href = '/' }}>Hủy</button>
             <button className={classes.ButtonTiepTuc} onClick={() => { window.location.href = '/DatLaiMatKhau' }}>Tiếp tục</button>
           </div>
           <LogoAlta

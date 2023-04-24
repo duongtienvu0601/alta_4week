@@ -128,6 +128,9 @@
 .passInputCustomShow:focus {
   outline: none;
 }
+.loginInput:focus{
+  outline: none;
+}
 
 
 .button {

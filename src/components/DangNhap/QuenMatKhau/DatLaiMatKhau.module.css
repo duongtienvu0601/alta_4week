@@ -15,11 +15,41 @@
 }
 
 .passContainer {
+
     position: absolute;
     width: 400px;
     height: 74px;
     left: 94px;
     top: 365px;
+
+}
+
+.passcontainer1 {
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 10px 12px;
+    gap: 10px;
+
+    position: absolute;
+    width: 400px;
+    height: 44px;
+    left: 94px;
+    top: 395px;
+
+    /* white */
+
+    background: #FFFFFF;
+    /* Gray/$-gray-100 */
+
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
 }
 
 .resetContainer {
@@ -29,11 +59,42 @@
     align-items: flex-start;
     padding: 0px;
     gap: 4px;
+
     position: absolute;
     width: 400px;
     height: 75px;
     left: 94px;
     top: 456px;
+}
+
+.PassContainer {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 10px 12px;
+    gap: 10px;
+
+    width: 400px;
+    height: 44px;
+
+    /* white */
+
+    background: #FFFFFF;
+    /* Gray/$-gray-100 */
+
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .passInputReset {
@@ -171,6 +232,29 @@
     border: 1.5px solid #D4D4D7;
     border-radius: 8px;
 }
+
+.passInputCustom {
+    width: 90%;
+    border: none;
+    font-size: medium;
+    font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+    -webkit-text-security: disc;
+}
+
+.passInputCustomShow {
+    width: 90%;
+    border: none;
+    font-size: medium;
+    font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+}
+
+.passInputCustom:focus,
+.passInputCustomShow:focus {
+    outline: none;
+}
+
 
 .IconShow {
     box-sizing: border-box;

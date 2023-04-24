@@ -2,7 +2,7 @@ import React from 'react';
 import {createBrowserRouter,
   RouterProvider, } from 'react-router-dom';
 import { DangNhap } from './components/DangNhap/DangNhap';
-import Profile from './components/Home/Profile';
+import Profile from './components/Profile/Profile';
 import { DatLaiMatKhau } from './components/DangNhap/QuenMatKhau/DatLaiMatKhau';
 import { QuenMatKhau } from './components/DangNhap/QuenMatKhau/QuenMatkhau';
 import { Provider } from 'react-redux';

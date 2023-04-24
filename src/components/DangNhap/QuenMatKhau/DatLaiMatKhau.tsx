@@ -14,6 +14,18 @@ interface Props {
 export const DatLaiMatKhau: FC<Props> = memo(function DatLaiMatKhau(
   props = {}
 ) {
+  let [password, setPassword] = useState("")
+  let [passwordReset, setPasswordReset] = useState("")
+  const [isMatch, setIsMatch] = useState(false);
+
+  const handleConfirm = () => {
+    if (password === passwordReset) {
+      setIsMatch(true);
+      window.location.href = "/";
+    } else {
+      setIsMatch(false);
+    }
+  };
   const [showPass, setShowPass] = useState(false);
   return (
     <div className={classes.main}>
@@ -21,43 +33,25 @@ export const DatLaiMatKhau: FC<Props> = memo(function DatLaiMatKhau(
         <p className={classes.TextReset}>Đặt lại mật khẩu mới</p>
         <div className={classes.passContainer}>
           <div className={classes.matKhau}>Mật khẩu</div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <input className={classes.inputPass}></input>
-            <UEyeSlash
-              className={classes.IconShow}
-              onClick={() => {
-                setShowPass(!showPass);
-              }}
-            />
+          <div className={classes.PassContainer}>
+             <input className={showPass === false ? classes.passInputCustom : classes.passInputCustomShow }value={password} onChange={(e) => setPassword(e.target.value)} />
+              <UEyeSlash onClick={() => {
+                setShowPass(!showPass)
+              }} />
           </div>
         </div>
 
         <div className={classes.resetContainer}>
           <div className={classes.resetPass}>Nhập lại mật khẩu</div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <input className={classes.inputPass}></input>
-            <UEyeSlash
-              className={classes.IconShow}
-              onClick={() => {
-                setShowPass(!showPass);
-              }}
-            />
+          <div className={classes.PassContainer}>
+             <input className={showPass === false ? classes.passInputCustom : classes.passInputCustomShow }value={passwordReset} onChange={(e) => setPasswordReset(e.target.value)} />
+              <UEyeSlash onClick={() => {
+                setShowPass(!showPass)
+              }} />
           </div>
         </div>
         <div>
-          <button className={classes.buttonConfirm}>Xác nhận</button>
+          <button onClick={handleConfirm} className={classes.buttonConfirm}>Xác nhận</button>
         </div>
 
         <div className={`${classes.groupImage} ${classes.groupImageNew}`}>
