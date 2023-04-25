@@ -42,6 +42,35 @@
     border-radius: 8px;
 }
 
+.DashboardItemClick {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 12px;
+    gap: 10px;
+
+    position: absolute;
+    width: 178px;
+    height: 48px;
+    left: 0px;
+    top: 150px;
+    cursor: pointer;
+
+    /* Orange/$-Orange-500 */
+
+    background: #FF7506;
+}
+
+.DashboardItemClick .text {
+    color: #FFFFFF;
+}
+
+.DashboardItemClick .IconBang {
+    color: #FFFFFF;
+}
+
 .DashboardItem:hover {
     color: #FF7506;
     background: #FFF2E7;
@@ -59,6 +88,15 @@
     background: #FFF2E7;
 }
 
+.DashboardItem .text {
+    color: #FF7506;
+    background: #FFF2E7;
+}
+
+.DashboardItem .IconBang {
+    color: #FF7506;
+    background: #FFF2E7;
+}
 .IconBang {
     width: 20px;
     height: 20px;
@@ -194,10 +232,6 @@
     stroke-width: 1px;
 }
 
-
-
-
-
 .CapsoItem {
     display: flex;
     flex-direction: row;
@@ -278,7 +312,7 @@
     background: #FFF2E7;
 }
 
-.BaocaoItem:hover .IconBaocao path{
+.BaocaoItem:hover .IconBaocao path {
     fill: #FF7506;
     stroke-opacity: inherit;
     stroke: #FF7506;
@@ -291,7 +325,7 @@
     width: 200px;
     height: 46px;
     left: 0px;
-    top: 632px;
+    top: 660px;
 
 }
 
@@ -404,23 +438,13 @@
 .textOut {
     width: 76px;
     height: 24px;
-
-    /* 16/16 Semi */
-
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
-
-
-    /* Orange/$-Orange-500 */
 
     color: #FF7506;
-
-
-    /* Inside auto layout */
 
     flex: none;
     order: 1;

@@ -25,7 +25,7 @@ const handleLogin = () => {
     if (hasClicked) {
       window.location.reload();
     } else if (username === "duongtienvu" && password === "123456") {
-      window.location.href = "http://localhost:3000/profile";
+      window.location.href = "/profile";
     } else {
       setHasClicked(true);
       setErrorMessage(true);

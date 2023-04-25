@@ -1,18 +1,34 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import type { FC } from "react";
 import { Icon } from '@iconify/react';
-import { ReactSVG } from 'react-svg';
 import classes from "./Menubar.module.css";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import DesktopWindowsRoundedIcon from '@mui/icons-material/DesktopWindowsRounded';
+
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import HelpOutlineRoundedIcon from '@mui/icons-material/HelpOutlineRounded';
+
 
 interface Props {
   className?: string;
 }
 
 export const Menubar: FC<Props> = memo(function Menubar(props = {}) {
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  useEffect(() => {
+    const clicked = localStorage.getItem("dashboardClicked");
+    if (clicked === "true") {
+      setIsClicked(true);
+    }
+  }, []);
+
+  const handleClick = () => {
+    window.location.href = "/dashboard";
+    setIsClicked(!isClicked);
+    localStorage.setItem("dashboardClicked", isClicked ? "true" : "false");
+
+  };
+
   return (
     <div className={classes.main}>
       <div className={classes.logoAlta}>
@@ -36,10 +52,14 @@ export const Menubar: FC<Props> = memo(function Menubar(props = {}) {
         </svg>
       </div>
       <div className={classes.menuItems}>
-        <div className={classes.DashboardItem}>
+        <div
+          className={isClicked ? classes.DashboardItemClick : classes.DashboardItem}
+          onClick={handleClick}
+        >
           <DashboardOutlinedIcon className={classes.IconBang} />
           <a className={classes.text}>Dashboard</a>
         </div>
+
         <div className={classes.ThietbiItem}>
           <svg className={classes.IconThietbi} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.367 1.667h9.258c2.967 0 3.708.742 3.708 3.7v5.275c0 2.967-.741 3.7-3.7 3.7H5.367c-2.959.008-3.7-.733-3.7-3.692V5.367c0-2.958.741-3.7 3.7-3.7zM10 14.35v3.983M1.667 10.833h16.666M6.25 18.333h7.5" stroke="#A9A9B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -98,6 +118,7 @@ export const Menubar: FC<Props> = memo(function Menubar(props = {}) {
           <path d="M10 12.625C8.55114 12.625 7.375 11.4489 7.375 10C7.375 8.55114 8.55114 7.375 10 7.375C11.4489 7.375 12.625 8.55114 12.625 10C12.625 11.4489 11.4489 12.625 10 12.625ZM10 7.625C8.69052 7.625 7.625 8.69052 7.625 10C7.625 11.3095 8.69052 12.375 10 12.375C11.3095 12.375 12.375 11.3095 12.375 10C12.375 8.69052 11.3095 7.625 10 7.625Z" fill="#292D32" stroke="#A9A9B0" />
         </svg>
         <a className={classes.textCaidat}>Cài đặt hệ thống</a>
+        
         <svg className={classes.ThreeDot} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "-12px" }}>
           <path d="M9.99996 16.6667C10.4602 16.6667 10.8333 16.2936 10.8333 15.8333C10.8333 15.3731 10.4602 15 9.99996 15C9.53972 15 9.16663 15.3731 9.16663 15.8333C9.16663 16.2936 9.53972 16.6667 9.99996 16.6667Z" fill="#A9A9B0" stroke="#A9A9B0" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M9.99996 10.8327C10.4602 10.8327 10.8333 10.4596 10.8333 9.99935C10.8333 9.53911 10.4602 9.16602 9.99996 9.16602C9.53972 9.16602 9.16663 9.53911 9.16663 9.99935C9.16663 10.4596 9.53972 10.8327 9.99996 10.8327Z" fill="#A9A9B0" stroke="#A9A9B0" strokeLinecap="round" strokeLinejoin="round" />
