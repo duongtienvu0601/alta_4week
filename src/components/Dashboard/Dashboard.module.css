@@ -15,7 +15,6 @@
     height: 88px;
     left: 200px;
     top: 0px;
-
 }
 
 .text {
@@ -49,18 +48,11 @@
     left: 40px;
     top: 84px;
 
-    /* 24/24 Bold */
-
     font-family: 'Nunito', serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 36px;
-    /* identical to box height, or 150% */
-
-
-    /* Orange/$-Orange-500 */
-
     color: #FF7506;
 }
 
@@ -79,6 +71,7 @@
 
 .imgAvatar {
     position: absolute;
+    cursor: pointer;
     width: 50px;
     height: 50px;
     right: 86px;
@@ -142,7 +135,7 @@
     z-index: 1;
 }
 
-.Bell {
+.frameBell .Bell path {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -153,16 +146,11 @@
 
 .frameTongQuan {
     position: absolute;
-    width: 354px;
+    width: 380px;
     height: 100vh;
-    left: 1115px;
+    left: 1137px;
     top: 0px;
-
-    /* White */
-
     background: #FFFFFF;
-    /* Dropdown */
-
     box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
     border-radius: 8px 0px 0px 8px;
     z-index: 0;
@@ -170,9 +158,9 @@
 
 .FrameChart {
     position: absolute;
-    width: 790px;
+    width: 850px;
     height: 128px;
-    left: 54px;
+    left: 45px;
     top: 156px;
     border-radius: 12px;
     display: flex;
@@ -225,15 +213,14 @@
 
 .Chartchart {
     position: absolute;
-    width: 791px;
-    height: 384px;
-    left: 54px;
+    width: 870px;
+    height: 420px;
+    left: 35px;
     top: 288px;
     background-color: #FFFFFF;
     /* Pink shadow */
     border-radius: 15px;
     filter: drop-shadow(2px 2px 15px rgba(70, 64, 67, 0.1));
-
 }
 
 .IconChart {
@@ -303,63 +290,330 @@
     height: 36px;
     left: 24px;
     top: 104px;
-
-    /* 24/24 Bold */
-
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
-    /* identical to box height, or 150% */
-
-
-    /* Orange/$-Orange-500 */
 
     color: #FF7506;
 }
 
 .frameThietBi {
     position: absolute;
-    width: 310px;
+    width: 340px;
     height: 83px;
     left: 25px;
     top: 156px;
 
     /* White */
-
-    background: #FF7506;
     box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
     border-radius: 12px;
 
 }
 
+.positionChart {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 16px;
+    top: 11px;
+}
+
+.phantram {
+    position: absolute;
+    width: 31px;
+    height: 24px;
+    left: 15px;
+    top: 18px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #535261;
+}
+
+
 .frameDichVu {
     position: absolute;
-    width: 310px;
+    width: 340px;
     height: 83px;
     left: 25px;
     top: 251px;
-
-    /* White */
-
-    background: #FF7506;
     box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
     border-radius: 12px;
 }
 
 .frameCapSo {
     position: absolute;
-    width: 310px;
+    width: 340px;
     height: 83px;
     left: 25px;
     top: 346px;
-
-    /* White */
-
-    background: #FF7506;
     box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
     border-radius: 12px;
+}
+
+.dataPosition {
+    position: absolute;
+    width: 64px;
+    height: 54px;
+    left: 88px;
+    top: 14px;
+}
+
+.trangThai {
+    position: absolute;
+    width: 125px;
+    height: 47px;
+    left: 85px;
+    top: 5px;
+}
+
+.trangThai1 {
+    position: absolute;
+    width: 125px;
+    height: 47px;
+    left: 173px;
+    top: 20px;
+}
+
+.trangThai2 {
+    position: absolute;
+    width: 145px;
+    height: 63px;
+    left: 173px;
+    top: 10px;
+}
+
+.dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 2px;
+    top: 9px;
+}
+
+.dot1 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 2px;
+    top: 33px;
+}
+
+.dot2 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 2px;
+    top: 55px;
+}
+
+
+.textTrangthai {
+    position: absolute;
+    width: 137px;
+    height: 21px;
+    left: 200px;
+    top: 18px;
+}
+
+.hoatdong {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 10px;
+    top: -15px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+
+    color: #7E7D88;
+}
+
+.hoatdong2 {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 10px;
+    top: -15px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+    color: #7E7D88;
+}
+
+.khonghoatdong {
+    position: absolute;
+    width: 120px;
+    height: 21px;
+    left: 10px;
+    top: 10px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+
+    color: #7E7D88;
+}
+
+.khonghoatdong2 {
+    position: absolute;
+    width: 120px;
+    height: 21px;
+    left: 10px;
+    top: 10px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+
+    color: #7E7D88;
+}
+
+.khonghoatdong3 {
+    position: absolute;
+    width: 120px;
+    height: 21px;
+    left: 10px;
+    top: 32px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+    color: #7E7D88;
+}
+
+.solieu {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: -15px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FF7506;
+
+}
+
+.solieu2 {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: -15px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #35C75A;
+
+}
+
+.solieu3 {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: 10px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #35C75A;
+
+}
+
+.solieuKhong {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: 10px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FF7506;
+
+}
+
+.solieuKhong2 {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: 32px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #35C75A;
+
+}
+
+.solieu1 {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: -15px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #4277FF;
+
+}
+
+.solieuKhong1 {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 120px;
+    top: 10px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #4277FF;
+
 }
 
 .frameDatePicker {
@@ -370,7 +624,7 @@
     padding: 16px 10px;
 
     position: absolute;
-    width: 290px;
+    width: 330px;
     height: 255px;
     left: 24px;
     top: 445px;
@@ -381,3 +635,4 @@
     box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
     border-radius: 12px;
 }
+

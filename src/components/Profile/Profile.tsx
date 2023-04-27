@@ -1,18 +1,27 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import type { FC } from "react";
 import classes from "./Profile.module.css";
 import { Menubar } from "../MenuBar/Menubar";
+import Notification from "../Notification/Notification";
+
 interface ProfileProps {
   className?: string;
 }
 
 const Profile: FC<ProfileProps> = memo(function Profile(props = {}) {
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleBellClick = () => {
+    setShowNotification(!showNotification);
+  };
+
   return (
     <div className={classes.main}>
       <div className={classes.TopBar}>
         <p className={classes.text}>Thông tin cá nhân</p>
-        <div className={classes.frameBell}>
-          <svg className={classes.Bell} width="32" height="32" viewBox="0 0 32 32" fill="none"
+        <div className={classes.frameBell} onClick={handleBellClick}>
+          <svg 
+            className={classes.Bell} width="32" height="32" viewBox="0 0 32 32" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <rect width="32" height="32" rx="16" fill="#FFF2E7" />
             <path d="M22.1168 18.0743L21.2834 16.691C21.1084 16.3827 20.9501 15.7993 20.9501 15.4577V13.3493C20.9501 11.391 19.8001 9.69935 18.1418 8.90768C17.7084 8.14102 16.9084 7.66602 15.9918 7.66602C15.0834 7.66602 14.2668 8.15768 13.8334 8.93268C12.2084 9.74102 11.0834 11.416 11.0834 13.3493V15.4577C11.0834 15.7993 10.9251 16.3827 10.7501 16.6827L9.90845 18.0743C9.57512 18.6327 9.50012 19.2493 9.70845 19.816C9.90845 20.3743 10.3834 20.8077 11.0001 21.016C12.6168 21.566 14.3168 21.8327 16.0168 21.8327C17.7168 21.8327 19.4168 21.566 21.0334 21.0243C21.6168 20.8327 22.0668 20.391 22.2834 19.816C22.5001 19.241 22.4418 18.6077 22.1168 18.0743Z" fill="#FFAC6A" />
@@ -55,11 +64,10 @@ const Profile: FC<ProfileProps> = memo(function Profile(props = {}) {
               </tr>
             </tbody>
           </table>
-
-
         </div>
       </div>
       <Menubar />
+      {showNotification && <Notification />}
     </div>
   );
 });

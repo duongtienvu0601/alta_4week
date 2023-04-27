@@ -7,7 +7,7 @@ import { DatLaiMatKhau } from './components/DangNhap/QuenMatKhau/DatLaiMatKhau';
 import { QuenMatKhau } from './components/DangNhap/QuenMatKhau/QuenMatkhau';
 import Dashboard from './components/Dashboard/Dashboard';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import store from './store/store';
 
 
 const router = createBrowserRouter([
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/dashboard",
-    element:<Dashboard/>,
+    element: <Dashboard/>,
   }
 ]);
 
