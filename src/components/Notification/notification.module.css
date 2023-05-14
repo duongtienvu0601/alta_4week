@@ -90,3 +90,19 @@
     opacity: 0.6;
     background-color: #D4D4D7;
 }
+
+.container.active {
+    background-color: #FFC89B;
+}
+
+.container.active .header {
+    background-color: #BF5805;
+}
+
+.container.active .content::-webkit-scrollbar-thumb {
+    background-color: #BF5805;
+}
+
+.container.active .content>.item:not(:last-child)::after {
+    background-color: #BF5805;
+}

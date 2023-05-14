@@ -6,6 +6,8 @@ import Profile from './components/Profile/Profile';
 import { DatLaiMatKhau } from './components/DangNhap/QuenMatKhau/DatLaiMatKhau';
 import { QuenMatKhau } from './components/DangNhap/QuenMatKhau/QuenMatkhau';
 import Dashboard from './components/Dashboard/Dashboard';
+import ThietBi from './components/ThietBi/ThietBi';
+import ThemThietBi from './components/ThietBi/ThemThietBi/ThemThietBi';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -30,7 +32,15 @@ const router = createBrowserRouter([
   {
     path:"/dashboard",
     element: <Dashboard/>,
-  }
+  },
+  {
+    path:"/thietbi",
+    element: <ThietBi/>
+  },
+  {
+    path:"/themthietbi",
+    element:<ThemThietBi/>,
+  },
 ]);
 
 

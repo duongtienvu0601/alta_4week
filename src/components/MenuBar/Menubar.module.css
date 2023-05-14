@@ -4,12 +4,7 @@
     height: 100vh;
     left: 0px;
     top: 0px;
-
-    /* White */
-
     background: #FFFFFF;
-    /* Dropdown */
-
     box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
     border-radius: 16px 0px 0px 16px;
 }
@@ -23,303 +18,84 @@
     cursor: pointer;
 }
 
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 5px;
+    top: 150px;
+    width: 100%;
+    height: fit-content;
+}
 /* Dashboard */
 .DashboardItem {
-    /* Auto layout */
-
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px 12px;
     gap: 10px;
-
-    position: absolute;
     width: 200px;
     height: 48px;
     left: 0px;
     top: 150px;
     cursor: pointer;
-    border-radius: 8px;
 }
-
+.DashboardItem:hover>.Icon path {
+    stroke: #FF7506;
+}
+.DashboardItemClick >.Icon path {
+    stroke: #FFFFFF;
+}
 .DashboardItemClick {
-    /* Auto layout */
-
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px 12px;
     gap: 10px;
-
-    position: absolute;
-    width: 178px;
+    width: 176px;
     height: 48px;
-    left: 0px;
-    top: 150px;
     cursor: pointer;
-
-    /* Orange/$-Orange-500 */
-
     background: #FF7506;
 }
-
-.DashboardItemClick .text {
-    color: #FFFFFF;
-}
-
+.DashboardItemClick .text,
 .DashboardItemClick .IconBang {
     color: #FFFFFF;
 }
-
 .DashboardItem:hover {
     color: #FF7506;
     background: #FFF2E7;
     width: 176px;
     height: 48px;
 }
-
-.DashboardItem:hover .text {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
+.DashboardItem:hover .text,
 .DashboardItem:hover .IconBang {
     color: #FF7506;
-    background: #FFF2E7;
-}
-
-.DashboardItem .text {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
-.DashboardItem .IconBang {
-    color: #FF7506;
-    background: #FFF2E7;
 }
 .IconBang {
     width: 20px;
     height: 20px;
-
-
-    /* Inside auto layout */
     color: #7E7D88;
     flex: none;
     order: 0;
     flex-grow: 0;
 }
-
-/* thiết bị*/
-.ThietbiItem {
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 12px;
-    gap: 10px;
-
-    position: absolute;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 204px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.ThietbiItem:hover {
-    color: #FF7506;
-    background: #FFF2E7;
-    width: 176px;
-    height: 48px;
-}
-
-.ThietbiItem:hover .text {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
-.ThietbiItem:hover .IconThietbi path {
-    stroke: #FF7506;
-    background: #FFF2E7;
-}
-
-.IconThietbi {
-    width: 20px;
-    height: 20px;
-    /* Inside auto layout */
-    color: #7E7D88;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
 
 .text {
-
     width: 80px;
     height: 24px;
-
-    /* 16/16 Semi */
 
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
-
-
-    /* Gray/$-gray-300 */
 
     color: #7E7D88;
-
-
-    /* Inside auto layout */
 
     flex: none;
     order: 1;
     flex-grow: 0;
 }
-
-
-.DichvuItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 12px;
-    gap: 10px;
-
-    position: absolute;
-    cursor: pointer;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 258px;
-
-}
-
-.DichvuItem:hover {
-    color: #FF7506;
-    background: #FFF2E7;
-    width: 176px;
-    height: 48px;
-}
-
-.IconDichvu {
-    width: 20px;
-    height: 20px;
-    /* Inside auto layout */
-    color: #7E7D88;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.DichvuItem:hover .text {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
-.DichvuItem:hover .IconDichvu path {
-    stroke: #FF7506;
-    stroke-width: 1px;
-}
-
-.DichvuItem:hover .IconDichvu circle {
-    stroke: #FF7506;
-    stroke-width: 1px;
-}
-
-.CapsoItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 12px;
-    gap: 10px;
-
-    position: absolute;
-    cursor: pointer;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 312px;
-
-}
-
-.CapsoItem:hover {
-    color: #FF7506;
-    background: #FFF2E7;
-    width: 176px;
-    height: 48px;
-}
-
-.IconCapso {
-    width: 20px;
-    height: 20px;
-    /* Inside auto layout */
-    color: #7E7D88;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.CapsoItem:hover .text {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
-.CapsoItem:hover .IconCapso {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
-.BaocaoItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 12px;
-    gap: 10px;
-
-    position: absolute;
-    cursor: pointer;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 366px;
-}
-
-.BaocaoItem:hover {
-    color: #FF7506;
-    background: #FFF2E7;
-    width: 176px;
-    height: 48px;
-}
-
-.IconBaocao {
-    width: 20px;
-    height: 20px;
-    /* Inside auto layout */
-    color: #7E7D88;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.BaocaoItem:hover .text {
-    color: #FF7506;
-    background: #FFF2E7;
-}
-
-.BaocaoItem:hover .IconBaocao path {
-    fill: #FF7506;
-    stroke-opacity: inherit;
-    stroke: #FF7506;
-}
-
-
-
 .frameLogout {
     position: absolute;
     width: 200px;
@@ -328,27 +104,23 @@
     top: 660px;
 
 }
-
 .DropdownItem {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 12px 4px;
     gap: 8px;
-
     position: absolute;
     cursor: pointer;
     width: 200px;
     height: 48px;
     left: 0px;
-    top: 420px;
+    top: 412px;
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
 }
-
-
 .DropdownItem:hover .ThreeDot path {
     fill: #FF7506;
     stroke: #FF7506;
@@ -411,11 +183,7 @@
     flex-grow: 1;
 }
 
-
-
 .logoutButton {
-    /* Auto layout */
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -428,8 +196,6 @@
     top: 0px;
     border-width: 2px;
     cursor: pointer;
-    /* Orange/$-Orange-50 */
-
     background: #FFF2E7;
     border-radius: 8px;
     border: none;
@@ -453,4 +219,65 @@
 
 .IconOut {
     color: #FF7506;
+}
+
+.MenuSetting {
+    position: relative;
+    width: 200px;
+    height: 144px;
+    top: 404px;
+    left: 200px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.frame1,
+.frame2,
+.frame3 {
+    position: absolute;
+    width: 200px;
+    height: 48px;
+    left: 0px;
+    background: #FFFFFF;
+    border-radius: 0px 12px 0px 0px;
+    cursor: pointer;
+}
+
+.frame1 {
+    top: 0px;
+}
+
+.frame2 {
+    top: 48px;
+}
+
+.frame3 {
+    top: 96px;
+}
+
+.itemMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+    height: 48px;
+    left: 12px;
+    top: 0px;
+    border-radius: 8px;
+}
+
+.textMenu {
+    width: 200px;
+    height: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7D88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }

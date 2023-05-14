@@ -1,0 +1,254 @@
+:root {
+    --orange-text-color-500: #FF7506;
+    --orange-row: #FFF2E7;
+    --orange-line: #FFE3CD;
+}
+
+.container {
+    width: 1200px;
+    height: 300px;
+}
+
+.device-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.device-list th,
+.device-list td {
+    padding: 3px;
+    text-align: left;
+}
+
+.device-list th:nth-child(1),
+.device-list th:nth-child(2) {
+    height: 50px;
+    width: 100px;
+}
+
+.device-list th:nth-child(3) {
+    width: 100px;
+}
+
+.device-list th:nth-child(4),
+.device-list th:nth-child(5) {
+    width: 200px;
+}
+
+.device-list th:nth-child(6) {
+    width: 400px;
+}
+
+.device-list td:nth-child(6) {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.device-list th:nth-child(7),
+.device-list th:nth-child(8) {
+    width: 100px;
+}
+
+.device-list td:not(:first-child, :last-child),
+.device-list th:not(:first-child, :last-child) {
+    border-right: 2px solid var(--orange-line);
+    border-left: 2px solid var(--orange-line);
+}
+
+.device-list th:first-child {
+    border-top-left-radius: 5px;
+}
+
+.device-list th:last-child {
+    border-top-right-radius: 5px;
+}
+
+.device-list td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+.device-list td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.device-list th {
+    background-color: var(--orange-text-color-500);
+    color: #fff;
+}
+
+.device-list tr:nth-child(even) {
+    background-color: var(--orange-row);
+}
+
+.device-list tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.device-list button {
+    display: block;
+    border: none;
+    color: #4277FF;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration-line: underline;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-green {
+    background-color: green;
+}
+
+.dot-red {
+    background-color: red;
+}
+
+.selectBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 250px;
+    height: 44px;
+    padding: 12px;
+    background: #FFFF;
+    border: 2px solid #D4D4D7;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url("/src/img/fi_chevron-down.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectBox:focus {
+    border-color: #FF7506;
+    outline: none;
+}
+
+.selectBox1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 24px;
+    position: absolute;
+    left: 280px;
+    top: 0px;
+    gap: 12px;
+    width: 250px;
+    height: 44px;
+    padding: 12px;
+    background: #FFFF;
+    border: 2px solid #D4D4D7;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url("/src/img/fi_chevron-down.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectBox1:focus {
+    border-color: #FF7506;
+    outline: none;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 1190px;
+    height: 490px;
+    margin-left: -10px;
+    /* Shadowbox */
+
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+}
+.selectBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 250px;
+    height: 44px;
+    padding: 12px;
+    background: #FFFF;
+    border: 2px solid #D4D4D7;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url("/src/img/fi_chevron-down.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectBox:focus {
+    border-color: #FF7506;
+    outline: none;
+}
+
+.selectBox1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 24px;
+    position: absolute;
+    left: 280px;
+    top: 0px;
+    gap: 12px;
+    width: 250px;
+    height: 44px;
+    padding: 12px;
+    background: #FFFF;
+    border: 2px solid #D4D4D7;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url("/src/img/fi_chevron-down.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectBox1:focus {
+    border-color: #FF7506;
+    outline: none;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 1190px;
+    height: 490px;
+    margin-left: -10px;
+    /* Shadowbox */
+
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+}

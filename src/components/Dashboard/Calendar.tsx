@@ -83,7 +83,8 @@ const Calendar: React.FC<Props> = () => {
                 {displayedDays.map((day) => (
                     <div
                         key={day.toISOString()}
-                        className={`calendarDays ${day.getMonth() !== currentMonth.getMonth() ? classes.otherMonthDay : ""} ${day.toDateString() === selectedDate.toDateString() ? "selected" : ""} ${day.toDateString() === new Date().toDateString() ? classes.currentDay : ""}`}
+                        className={`calendarDays ${day.getMonth() !== currentMonth.getMonth() ? classes.otherMonthDay : ""} ${day.toDateString() === selectedDate.toDateString() ? "selected" : ""} ${day.toDateString() === new Date().toDateString() ? classes.currentDay : ""} ${day < new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) ? classes.disabled : ""}`}
+
                         onMouseOver={() => setSelectedDate(day)}
                     >
                         {day.getDate()}

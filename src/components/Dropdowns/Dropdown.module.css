@@ -1,0 +1,70 @@
+.selectBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 250px;
+    height: 44px;
+    padding: 12px;
+    background: #FFFF;
+    border: 2px solid #D4D4D7;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url("/src/img/fi_chevron-down.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectBox:focus {
+    border-color: #FF7506;
+    outline: none;
+}
+
+.selectBox1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 24px;
+    position: absolute;
+    left: 280px;
+    top: 0px;
+    gap: 12px;
+    width: 250px;
+    height: 44px;
+    padding: 12px;
+    background: #FFFF;
+    border: 2px solid #D4D4D7;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url("/src/img/fi_chevron-down.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectBox1:focus {
+    border-color: #FF7506;
+    outline: none;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 1190px;
+    height: 490px;
+    margin-left: -10px;
+    /* Shadowbox */
+
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+}

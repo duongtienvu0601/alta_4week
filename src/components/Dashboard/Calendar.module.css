@@ -47,7 +47,7 @@
     position: absolute;
     width: 280px;
     height: 0px;
-    left: 10px;
+    left: 35px;
     top: 55px;
     gap: 15px;
     border: 1px solid #DCDDFD;
@@ -99,6 +99,10 @@
 .calendarDays .currentDay {
     background-color: #FF7506;
     color: #fff;
+}
+.calendarDays .disabled{
+    color: #a4a3b0;
+    pointer-events: none;
 }
 
 .calendarDays>div {

@@ -10,7 +10,7 @@ type BreadcrumState = {
 }
 
 const initialState: BreadcrumState = {
-    value: [] 
+    value: [],
 }
 
 export const breadcrumSlice = createSlice({
