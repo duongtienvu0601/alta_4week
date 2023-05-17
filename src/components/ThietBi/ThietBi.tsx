@@ -1,4 +1,4 @@
-import { memo, useState, useEffect, useRef } from "react";
+import { memo, useState, useEffect, useRef, useCallback } from "react";
 import type { FC } from "react";
 import classes from "./ThietBi.module.css";
 import { Menubar } from "../MenuBar/Menubar";
@@ -10,8 +10,7 @@ import { addValue, changeValue } from "../../store/reducers/breadcrumbSlice";
 import Dropdown from "../Dropdowns/Dropdown";
 import Table from "./Table/Table";
 import ThemThietBi from "../ThietBi/ThemThietBi/ThemThietBi";
-import TableRow from "../ThietBi/Table/TableRow";
-import { changeDevice } from "../../store/reducers/deviceSlice";
+import { changeDevice, changeStatusFillter, fillterDevice } from "../../store/reducers/deviceSlice";
 import Header from "../../layouts/header";
 interface ThietBiProps {
     className?: string;
@@ -29,6 +28,10 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [showNotification, setShowNotification] = useState(false);
+    const [fillter, setFillter] = useState({
+        status: "Tất cả",
+        type: "Tất cả"
+    })
     const state = useSelector((state: RootState) => state.breadcrumb.value);
     const deviceStatus = useSelector((state: RootState) => state.devices.initialState)
 
@@ -93,6 +96,43 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
 
     // }, [])
 
+
+    const handeFilter = useCallback( () => {
+
+        let result = [];
+
+        if (fillter.status === "Tất cả" && fillter.type === "Tất cả") {
+            // Hiển thị toàn bộ danh sách thiết bị
+            result = deviceStatus;
+        } else {
+            if (fillter.status === "Tất cả") {
+                // Lọc danh sách thiết bị theo trạng thái hành động được chọn
+                result = deviceStatus.filter(item => item.statusAction === fillter.type);
+            } else if (fillter.type === "Tất cả") {
+                // Lọc danh sách thiết bị theo trạng thái kết nối được chọn
+                result = deviceStatus.filter(item => item.statusConnect === fillter.status);
+            } else {
+                // Lọc danh sách thiết bị theo cả trạng thái kết nối và trạng thái hành động được chọn
+                result = deviceStatus.filter(item => item.statusConnect === fillter.status && item.statusAction === fillter.type);
+            }
+        }
+
+        dispatch(changeStatusFillter(true))
+        dispatch(fillterDevice(result))
+        if (fillter.status === "Tất cả" && fillter.type === "Tất cả") {
+            // Hiển thị toàn bộ danh sách thiết bị
+            dispatch(changeStatusFillter(false));
+        }
+
+        return result;
+    }, [fillter, deviceStatus, dispatch] )
+
+
+    useEffect(() => {
+        handeFilter();
+    }, [handeFilter])
+    
+
     const themthietbi = () => {
         dispatch(addValue({
             title: "Thêm thiết bị",
@@ -116,23 +156,39 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
                         )
                     })}
                 </ul>
-
-                {/* <p className={classes.text}>Thiết bị <span>Danh sách thiết bị</span></p>
-                <p className={classes.chartText}>Danh sách thiết bị</p> */}
             </div>
             <div className={classes.FrameDropdown}>
-                <Dropdown />
+
+                <div
+                    style={{ display: "flex", flexDirection: "row" }}
+                >
+                    <Dropdown data={[
+                        "Tất cả", "Hoạt động", "Ngưng hoạt động"
+                    ]} 
+                    onSelecter={(e) => {
+                        setFillter({...fillter, type: e.target.value})
+                    }}
+                    />
+
+                    <Dropdown data={[
+                        "Tất cả", "Kết nối", "Mất kết nối"
+                    ]} 
+                    onSelecter={(e) => {
+                        // console.log(e.target.value);
+                        setFillter({...fillter, status: e.target.value})
+                    }}
+                    />
+                </div>
                 <Table />
             </div>
             <a className={classes.h1}>Danh sách thiết bị</a>
+            <Menubar />
+            {showNotification && <Notification />}
             <div className={classes.FrameMain}>
                 <div className={classes.buttonAdd}>
                     <button onClick={themthietbi}> <span>Thêm thiết bị</span></button>
                 </div>
-
             </div>
-            <Menubar />
-            {showNotification && <Notification />}
         </div>
     )
 })

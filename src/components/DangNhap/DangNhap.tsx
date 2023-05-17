@@ -6,7 +6,9 @@ import { GroupPeopleIcon } from './GroupPeopleIcon';
 import { GroupIcon } from './GroupIcon';
 import { LogoAlta } from '../LogoAlta/LogoAlta';
 import { UEyeSlash } from './UEyeSlash/UEyeSlash';
-
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from '../../config/firebase';
+import { Account } from '../../types';
 interface Props {
   className?: string;
   handleLogin?: () => void;
@@ -22,20 +24,35 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
     showPass: false
   });
 
-  const handleLogin = () => {
-    const { hasClicked, username, password } = loginInfo;
-    if (hasClicked) {
-      window.location.reload();
-    } else if (username === "duongtienvu" && password === "123456") {
-      window.location.href = "/dashboard";
-    } else {
-      setLoginInfo({
-        ...loginInfo,
-        hasClicked: true,
-        errorMessage: true,
-        passFogot: false
-      });
+  const handleLogin = async () => {
+    const accountRef = collection(db, "account");
+    let account: Account | undefined;
+    const que = query(accountRef, where("username", "==", loginInfo.username), where("password", "==", loginInfo.password));
+    const querySnapshot = await getDocs(que);
+    querySnapshot.forEach((doc) => {
+      // console.log(doc.id, " => ", doc.data());
+      const data = doc.data() as { password: string, username: string };
+      account = {
+        id: doc.id.toString(),
+        userName: data.username,
+        password: data.password
+      };
+    });
+
+    if (account === undefined) {
+      setLoginInfo({ ...loginInfo, errorMessage: true, hasClicked: true, passFogot: false })
+      return;
     }
+
+    // sessionStorage.setItem('isLoggedIn', 'true');
+
+    // Hạn lưu 1 ngày
+    const expirationDate = new Date(Date.now() + 86400000).toUTCString();
+    const valueString = JSON.stringify(true);
+    document.cookie = `isLoggedIn=${valueString}; expires=${expirationDate}`
+
+
+    window.location.href = "/dashboard";
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -102,7 +119,7 @@ export const DangNhap: FC<Props> = memo(function DangNhap(props = {}) {
           onClick={handleLogin}
         />
       </div>
-      <div className={classes.groupImage} style={{ marginTop: '20px' }}>
+      <div className={classes.groupImage} style={{ marginTop: '0px' }}>
         <GroupPeopleIcon className={classes.icon2} />
         <div className={classes.heThong}>
           <div className={classes.textBlock}>Hệ thống</div>

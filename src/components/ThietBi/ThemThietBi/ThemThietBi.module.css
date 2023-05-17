@@ -1,0 +1,111 @@
+.breadcrumb {
+    list-style: none;
+    margin-left: 240px;
+    margin-bottom: 20px;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    color: #7E7D88;
+}
+
+.breadcrumb li:last-child,
+.breadcrumb li:last-child a,
+.breadcrumb li:last-child p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    color: #FF7506;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    color: #7E7D88;
+    margin-left: 10px;
+}
+
+.breadcrumb li a {
+    color: #7E7D88;
+    text-decoration: none;
+}
+
+.frameAdd {
+    position: absolute;
+    width: 1152px;
+    height: 300px;
+    left: 224px;
+    top: 150px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+}
+
+.textA {
+    position: absolute;
+    width: 169px;
+    height: 36px;
+    left: 0px;
+    top: -30px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FF7506;
+}
+
+.button {
+    display: flex;
+    /* Add flex display */
+    justify-content: space-between;
+    /* Distribute buttons evenly */
+    align-items: center;
+    /* Center align vertically */
+    width: 326px;
+    height: 48px;
+    margin-left: 500px;
+}
+
+.button .button1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 3px;
+    width: 130px;
+    height: 38px;
+    background: #FFF2E7;
+    border: 1.5px solid #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button .button2 {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 3px;
+    width: 130px;
+    height: 38px;
+    background: #FF9138;
+    border: 1.5px solid #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+    cursor: pointer;
+}

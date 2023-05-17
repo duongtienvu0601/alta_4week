@@ -42,6 +42,29 @@
     flex-grow: 0;
 }
 
+.chartText {
+    position: absolute;
+    width: 162px;
+    height: 36px;
+    left: 50px;
+    top: 84px;
+
+    /* 24/24 Bold */
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+
+
+    /* Orange/$-Orange-500 */
+
+    color: #FF7506;
+
+}
+
 .frameTongQuan {
     position: absolute;
     width: 380px;

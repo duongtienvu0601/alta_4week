@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classes from './Table.module.css';
 import ButtonUpdate from "../../Button/ButtonUpdate";
-import TableRow from "../Table/TableRow";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
 import { useNavigate } from 'react-router-dom';
@@ -50,7 +49,7 @@ const devices: Device[] = [
         name: 'Thiết bị 2',
         ipAddress: '192.168.1.2',
         statusAction: 'Ngưng hoạt động',
-        statusConnect: 'Mất kết nối',
+        statusConnect: 'Kết nối',
         service: 'Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
 
     },
@@ -68,7 +67,7 @@ const devices: Device[] = [
         name: 'Thiết bị 2',
         ipAddress: '192.168.1.2',
         statusAction: 'Hoạt động',
-        statusConnect: 'Mất Kết nối',
+        statusConnect: 'Mất kết nối',
         service: 'Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
     },
     {
@@ -76,7 +75,7 @@ const devices: Device[] = [
         name: 'Thiết bị 2',
         ipAddress: '192.168.1.2',
         statusAction: 'Hoạt động',
-        statusConnect: 'Mất Kết nối',
+        statusConnect: 'Mất kết nối',
         service: 'Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
     },
     {
@@ -84,7 +83,7 @@ const devices: Device[] = [
         name: 'Thiết bị 2',
         ipAddress: '192.168.1.2',
         statusAction: 'Ngưng hoạt động',
-        statusConnect: 'Mất Kết nối',
+        statusConnect: 'Kết nối',
         service: 'Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
     },
 ]
@@ -101,7 +100,6 @@ const Table: React.FC<Props> = () => {
     const statusConnectClass = (status: string) => {
         return status === "Kết nối" ? classes["dot-green"] : classes["dot-red"];
     }
-
 
     const serviceCellContent = (text: string) => {
         return (

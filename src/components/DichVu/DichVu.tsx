@@ -1,18 +1,18 @@
 import { memo, useState, useEffect, useRef } from "react";
-import Header from "../../../layouts/header";
-import { Menubar } from "../../MenuBar/Menubar";
+import Header from "../../layouts/header";
+import { Menubar } from "../MenuBar/Menubar";
 import type { FC } from "react";
-import classes from "./ThemThietBi.module.css";
-import Notification from "../../Notification/Notification";
+import classes from "./DichVu.module.css";
+import Notification from "../Notification/Notification";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
+import { RootState } from "../../store/store";
 import { useNavigate } from 'react-router-dom';
-import { addValue, changeValue } from "../../../store/reducers/breadcrumbSlice";
-interface ThemThietBiProps {
+import { addValue, changeValue } from "../../store/reducers/breadcrumbSlice";
+interface DichVuProps {
   className?: string;
 }
 
-const ThemThietBi: FC<ThemThietBiProps> = memo(function ThemThietBi(props = {}) {
+const DichVu: FC<DichVuProps> = memo(function DichVu(props = {}) {
   const { className } = props;
   const [showNotification, setShowNotification] = useState(false);
   const handleBellClick = () => {
@@ -34,20 +34,13 @@ const ThemThietBi: FC<ThemThietBiProps> = memo(function ThemThietBi(props = {}) 
           )
         })}
       </ul>
-      <div className={classes.frameAdd}>
-        <a className={classes.textA}>Quản lý thiết bị</a>
-        
-        <div className={classes.button}>
-        <button className={classes.button1} onClick={() => console.log("Button clicked!")}>Hủy bỏ</button>
-        <button className={classes.button2}>Thêm thiết bị</button>
-        </div>
-      </div>
+      <h1 style={{ marginLeft: '200px' }}> Đây là from Dịch Vụ</h1>
       {showNotification && <Notification />}
       <Menubar />
 
     </div>
   )
 })
-export default ThemThietBi;
+export default DichVu;
 
 
