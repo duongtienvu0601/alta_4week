@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { useNavigate } from 'react-router-dom';
 import { addValue, changeValue } from "../../store/reducers/breadcrumbSlice";
+import { ButtonFull } from "../Button/ButtonFull";
+import { ButtonOutline } from "../Button/ButtonOutline";
 interface DichVuProps {
   className?: string;
 }
@@ -34,6 +36,10 @@ const DichVu: FC<DichVuProps> = memo(function DichVu(props = {}) {
           )
         })}
       </ul>
+      <div style={{ marginLeft: '260px' }}>
+        <ButtonFull onClick={() => console.log("hello")} text="Thêm dịch vụ" />
+        <ButtonOutline onClick={() => console.log("hello")} text="Hủy bỏ"/>
+      </div>
       <h1 style={{ marginLeft: '200px' }}> Đây là from Dịch Vụ</h1>
       {showNotification && <Notification />}
       <Menubar />

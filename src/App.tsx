@@ -9,6 +9,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import ThietBi from './components/ThietBi/ThietBi';
 import DichVu from './components/DichVu/DichVu';
 import ThemThietBi from './components/ThietBi/ThemThietBi/ThemThietBi';
+import ChiTietThietBi from './components/ThietBi/ChiTietThietBi/ChiTietThietBi';
+import { Capso } from './components/CapSo/CapSo';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
     path:"/dichvu",
     element:<DichVu/>,
   },
+  {
+    path:"/capso",
+    element:<Capso/>
+  },
+  {
+    path:"/chitietthietbi",
+    element:<ChiTietThietBi/>
+  }
 ]);
 
 

@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
 import { useNavigate } from 'react-router-dom';
 import { changeDevice } from "../../../store/reducers/deviceSlice";
+import { addValue } from "../../../store/reducers/breadcrumbSlice";
+import { PaginationControl } from 'react-bootstrap-pagination-control';
+import ThietBi from "../ThietBi";
 interface Props {
     className?: string;
 }
@@ -93,6 +96,7 @@ const Table: React.FC<Props> = () => {
     const deviceStatus = useSelector((state: RootState) => state.devices.initialState)
     const dataFilter = useSelector((state: RootState) => state.devices.changeValueDevice)
     const statusFilter = useSelector((state: RootState) => state.devices.isFillter)
+    const [page, setPage] = useState(1) 
     const dotClass = classes.dot;
     const statusActionClass = (status: string) => {
         return status === "Hoạt động" ? classes["dot-green"] : classes["dot-red"];
@@ -105,14 +109,29 @@ const Table: React.FC<Props> = () => {
         return (
             <>
                 {text}
-                {ButtonUpdate({ onClick: () => console.log("Xem thêm"), text: "Xem thêm" })}
+                <ButtonUpdate className={classes.Button} onClick={() => navigate('/chitietthietbi')} text="Xem thêm" />
             </>
         )
     }
+    const navigate = useNavigate();
     useEffect(() => {
         dispatch(changeDevice(devices))
         console.log(deviceStatus)
     }, [])
+    const Chitiet = () => {
+        dispatch(addValue({
+            title: "Chi tiết thiết bị",
+            path: "/chitietthietbi",
+        }));
+        navigate('/chitietthietbi');
+    };
+    const CapNhat = () => {
+        dispatch(addValue({
+            title: "Cập nhật thiết bị",
+            path: "/thietbi",
+        }));
+        navigate('/thietbi');
+    };
     return (
         <div className={classes.container}>
             <table
@@ -148,38 +167,47 @@ const Table: React.FC<Props> = () => {
                                 </td>
                                 <td>{serviceCellContent(device.service)}</td>
                                 <td>
-                                    {ButtonUpdate({ onClick: () => console.log("Chi tiết"), text: "Chi tiết" })}
+                                    <ButtonUpdate onClick={Chitiet} text="Chi tiết" />
                                 </td>
                                 <td>
-                                    {ButtonUpdate({ onClick: () => console.log("Cập nhật"), text: "Cập nhật" })}
+                                    <ButtonUpdate onClick={CapNhat} text="Cập nhật" />
                                 </td>
                             </tr>))
-                    : dataFilter.map((device) => (
-                                <tr key={device.id} >
-                                    <td>{device.id}</td>
-                                    <td>{device.name}</td>
-                                    <td>{device.ipAddress}</td>
-                                    <td>
-                                        <span className={`${dotClass} ${statusActionClass(device.statusAction)}`} />
+                        : dataFilter.map((device) => (
+                            <tr key={device.id} >
+                                <td>{device.id}</td>
+                                <td>{device.name}</td>
+                                <td>{device.ipAddress}</td>
+                                <td>
+                                    <span className={`${dotClass} ${statusActionClass(device.statusAction)}`} />
 
-                                        {device.statusAction}
-                                    </td>
-                                    <td>
-                                        <span className={`${dotClass} ${statusConnectClass(device.statusConnect)}`} />
-                                        {device.statusConnect}
-                                    </td>
-                                    <td>{serviceCellContent(device.service)}</td>
-                                    <td>
-                                        {ButtonUpdate({ onClick: () => console.log("Chi tiết"), text: "Chi tiết" })}
-                                    </td>
-                                    <td>
-                                        {ButtonUpdate({ onClick: () => console.log("Cập nhật"), text: "Cập nhật" })}
-                                    </td>
-                                </tr>
-                            ))
+                                    {device.statusAction}
+                                </td>
+                                <td>
+                                    <span className={`${dotClass} ${statusConnectClass(device.statusConnect)}`} />
+                                    {device.statusConnect}
+                                </td>
+                                <td>{serviceCellContent(device.service)}</td>
+                                <td>
+                                    <ButtonUpdate onClick={Chitiet} text="Chi tiết" />
+                                </td>
+                                <td>
+                                    <ButtonUpdate onClick={() => navigate('/chitietthietbi')} text="Cập nhật" />
+                                </td>
+                            </tr>
+                        ))
                     }
                 </tbody>
             </table>
+            {/* <PaginationControl page={page}
+                between={4}
+                total={250}
+                limit={20}
+                changePage={(page) => {
+                    setPage(page);
+                    console.log(page)
+                }}
+                ellipsis={1} /> */}
         </div>
     );
 }

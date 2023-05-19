@@ -1,0 +1,31 @@
+.FrameMain {
+    margin-top: 230px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 12px;
+    background: #FFF2E7;
+    cursor: pointer;
+}
+
+.buttonAdd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonAdd>span {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FF7506;
+}

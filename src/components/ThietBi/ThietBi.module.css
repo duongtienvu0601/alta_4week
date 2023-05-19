@@ -144,19 +144,6 @@
     z-index: 1;
 }
 
-.FrameMain {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    position: relative;
-    width: 1200px;
-    height: 490px;
-    left: 210px;
-    top: 200px;
-    /* Shadowbox */
-    border-radius: 12px;
-}
 
 .FrameDropdown {
     position: absolute;
@@ -166,6 +153,20 @@
     top: 156px;
 }
 
+.FrameTable {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 210px;
+    margin-left: 210px;
+    width: 1230px;
+    height: 490px;
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+}
+.FrameButon{
+    padding-right: -200px;
+}
 .buttonAdd {
     display: flex;
     flex-direction: column;
@@ -181,13 +182,14 @@
     top: 244px;
     background: #FFF2E7;
     box-shadow: 0px 0px 6px #E7E9F2;
+    cursor: pointer;
 }
 
 .buttonAdd button {
     padding: 30px 10px;
     gap: 7px;
     width: 80px;
-    height: 94px;
+    height: 50px;
     display: flex;
     background: #FFF2E7;
     border: none;
@@ -205,6 +207,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    cursor: pointer;
 }
 
 .h1 {
@@ -262,4 +265,34 @@
 .breadcrumb li a {
     color: #7E7D88;
     text-decoration: none;
+}
+
+.TrangThai {
+    position: absolute;
+    width: 153px;
+    height: 24px;
+    top: -10px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #282739;
+
+}
+
+.TrangThai1 {
+    position: absolute;
+    width: 153px;
+    height: 24px;
+    top: -10px;
+    left: 270px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282739;
+
 }

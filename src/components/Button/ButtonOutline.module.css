@@ -1,0 +1,19 @@
+.ButtonOutline {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    margin-right: 10px;
+    gap: 3px;
+    width: 130px;
+    height: 38px;
+    background: #FFF2E7;
+    border: 1.5px solid #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #FF9138;
+    ;
+}

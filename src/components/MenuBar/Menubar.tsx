@@ -126,14 +126,6 @@ export const Menubar: FC<Props> = memo(function Menubar(props = {}) {
   const handleItemClick = (item: string) => {
     console.log(`Clicked on ${item}`);
   };
-  // useEffect(() => {
-  //   // const clicked = localStorage.getItem("dashboardClicked");
-  //   // if (clicked === "true") {
-  //   //   setIsClicked(true);
-  //   // }
-  //   console.log(state);
-
-  // }, [state]);
 
   const handleClick = (name: string, path: string) => {
     let temp = [];

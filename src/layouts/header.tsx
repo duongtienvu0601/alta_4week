@@ -1,16 +1,33 @@
 import React from 'react';
 import classes from './Header.module.css';
-
+import { RootState } from '../store/store';
+import { useSelector } from 'react-redux';
 interface HeaderProps {
     handleBellClick: () => void;
     className?: string;
 }
 
-
 const Header: React.FC<HeaderProps> = ({ handleBellClick }) => {
+    const state = useSelector((state: RootState) => state.breadcrumb.value);
     return (
         <React.Fragment>
             <div className={classes.TopBar}>
+                <ul
+                    className={classes.breadcrumb}
+                >
+                    {state.map((item) => {
+                        return (
+                            <li
+                                key={item.title}
+                            >
+                                {item.path ?
+                                    <a href={item.path}>{item.title}</a> :
+                                    <p>{item.title}</p>
+                                }
+                            </li>
+                        )
+                    })}
+                </ul>
                 <div className={classes.frameBell} onClick={handleBellClick}>
                     <svg className={classes.Bell} width="32" height="32" viewBox="0 0 32 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

@@ -1,0 +1,45 @@
+.main {
+    position: absolute;
+    width: 300px;
+    height: 72px;
+    left: -200px;
+    top: -165px;
+}
+
+.text {
+    position: absolute;
+    width: 62px;
+    height: 23.96px;
+    left: 1036px;
+    top: 156px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282739;
+}
+
+.input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 10px 12px;
+    gap: 10px;
+    position: absolute;
+    width: 300px;
+    height: 44px;
+    left: 1036px;
+    top: 184px;
+    background: #FFFFFF;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    background-image: url("/src/img/fi_search.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: calc(95%) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

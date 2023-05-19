@@ -9,9 +9,10 @@ import { useNavigate } from 'react-router-dom';
 import { addValue, changeValue } from "../../store/reducers/breadcrumbSlice";
 import Dropdown from "../Dropdowns/Dropdown";
 import Table from "./Table/Table";
-import ThemThietBi from "../ThietBi/ThemThietBi/ThemThietBi";
 import { changeDevice, changeStatusFillter, fillterDevice } from "../../store/reducers/deviceSlice";
 import Header from "../../layouts/header";
+import SearchBox from "../SearchBox/SearchBox";
+import { ButtonAdd } from "../Button/ButtonAdd";
 interface ThietBiProps {
     className?: string;
 }
@@ -91,13 +92,8 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
             service: 'Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát',
         },
     ]
-    // useEffect(() => {
-    //    dispatch(changeDevice(devices))
 
-    // }, [])
-
-
-    const handeFilter = useCallback( () => {
+    const handeFilter = useCallback(() => {
 
         let result = [];
 
@@ -125,13 +121,13 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
         }
 
         return result;
-    }, [fillter, deviceStatus, dispatch] )
+    }, [fillter, deviceStatus, dispatch])
 
 
     useEffect(() => {
         handeFilter();
     }, [handeFilter])
-    
+
 
     const themthietbi = () => {
         dispatch(addValue({
@@ -144,51 +140,42 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
         <div className={classes.main}>
             <div className={classes.TopBar}>
                 <Header handleBellClick={handleBellClick} />
-                <ul className={classes.breadcrumb}>
-                    {state.map((item) => {
-                        return (
-                            <li key={item.title} >
-                                {item.path ?
-                                    <a href={item.path}>{item.title}</a> :
-                                    <p>{item.title}</p>
-                                }
-                            </li>
-                        )
-                    })}
-                </ul>
             </div>
             <div className={classes.FrameDropdown}>
-
+                <SearchBox />
                 <div
-                    style={{ display: "flex", flexDirection: "row" }}
+                    style={{ display: "flex", flexDirection: "row", gap: "20px", marginTop: "20px" }}
                 >
+                    <a className={classes.TrangThai}>Trạng thái hoạt động</a>
                     <Dropdown data={[
                         "Tất cả", "Hoạt động", "Ngưng hoạt động"
-                    ]} 
-                    onSelecter={(e) => {
-                        setFillter({...fillter, type: e.target.value})
-                    }}
+                    ]}
+                        onSelecter={(e) => {
+                            setFillter({ ...fillter, type: e.target.value })
+                        }}
                     />
-
+                    <a className={classes.TrangThai1}>Trạng thái kết nối</a>
                     <Dropdown data={[
                         "Tất cả", "Kết nối", "Mất kết nối"
-                    ]} 
-                    onSelecter={(e) => {
-                        // console.log(e.target.value);
-                        setFillter({...fillter, status: e.target.value})
-                    }}
+                    ]}
+                        onSelecter={(e) => {
+                            setFillter({ ...fillter, status: e.target.value })
+                        }}
                     />
                 </div>
+            </div>
+            <div className={classes.FrameTable}>
                 <Table />
             </div>
+            <ButtonAdd
+                text="Thêm thiết bị"
+                onClick={themthietbi}
+            />
             <a className={classes.h1}>Danh sách thiết bị</a>
             <Menubar />
             {showNotification && <Notification />}
-            <div className={classes.FrameMain}>
-                <div className={classes.buttonAdd}>
-                    <button onClick={themthietbi}> <span>Thêm thiết bị</span></button>
-                </div>
-            </div>
+
+
         </div>
     )
 })
