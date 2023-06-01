@@ -1,5 +1,5 @@
 :root {
-    --orange-text-color-500: #FF9138;
+    --orange-text-color-500: #FF7506;
     --orange-row: #FFF2E7;
     --orange-line: #FFE3CD;
 }
@@ -19,20 +19,16 @@
 .deviceList td {
     padding: 3px;
     text-align: left;
-    height: 40px;
 }
 
-.deviceList th:nth-child(1){
-    width: 100px;
-}
-
+.deviceList th:nth-child(1),
 .deviceList th:nth-child(2) {
-    height: 40px;
+    height: 50px;
     width: 190px;
 }
 
 .deviceList th:nth-child(3) {
-    width: 280px;
+    width: 190px;
 }
 
 .deviceList th:nth-child(4),
@@ -41,7 +37,7 @@
 }
 
 .deviceList th:nth-child(6) {
-    width: 200px;
+    width: 400px;
 }
 
 .deviceList td:nth-child(6) {
@@ -51,9 +47,7 @@
     text-overflow: ellipsis;
 }
 
-.deviceList th:nth-child(7){
-    width: 120px;
-}
+.deviceList th:nth-child(7),
 .deviceList th:nth-child(8) {
     width: 100px;
 }
@@ -110,15 +104,12 @@
     display: inline-block;
 }
 
-.dot-blue {
-    background-color: blue;
+.dot-green {
+    background-color: green;
 }
 
 .dot-red {
     background-color: red;
-}
-.dot-gray{
-    background-color: gray;
 }
 
 .selectBox {
@@ -181,7 +172,7 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-    align-items: center;
+
     position: absolute;
     width: 1190px;
     height: 490px;
@@ -244,4 +235,20 @@
 .selectBox1:focus {
     border-color: #FF7506;
     outline: none;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 1190px;
+    height: 490px;
+    margin-left: -10px;
+    /* Shadowbox */
+
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
 }

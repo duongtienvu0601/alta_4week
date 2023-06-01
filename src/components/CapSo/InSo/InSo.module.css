@@ -1,0 +1,62 @@
+.FrameMain {
+  width: 469px;
+  height: 344px;
+  margin-top: 160px;
+  margin-left: 560px;
+  background: #f3f7ee;
+  border-radius: 24px;
+}
+.FrameData {
+  width: 469px;
+  height: 183px;
+  text-align: center;
+}
+.Text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #535261;
+  padding-top: 20px;
+}
+.Text1 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 60px;
+  color: #ff7506;
+}
+
+.FrameTime {
+  width: 469px;
+  height: 80px;
+  background: #ff9138;
+  border-radius: 0 0 24px 24px;
+}
+.Text2 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #282739;
+}
+.Text3 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #ff9138;
+}
+.Text4 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #282739;
+}

@@ -1,0 +1,113 @@
+.body {
+    width: 1192px;
+    height: 534px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+}
+
+.body>p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF7506;
+}
+
+.body>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputform {
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.inputform>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputform>div>p{
+    margin: 0;
+}
+.inputform>div>p>span{
+    color: red;
+}
+
+.nameInput {
+    padding: 10px 270px 10px 12px;
+    gap: 10px;
+    width: 90%;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.discription {
+    margin-top: 20px;
+}
+
+.discription>p{
+    margin: 0;
+}
+
+.discription>p>span{
+    color: red;
+}
+
+.discription>textarea {
+    padding: 10px 270px 10px 12px;
+    gap: 10px;
+    width: 90%;
+    height: 160px;
+    background: #FFFFFF;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.checkBox {
+    width: 50%;
+    height: 85%;
+}
+.checkBox>p{
+    margin-top: 0;
+}
+.checkBox>p>span{
+    color: red;
+}
+
+.checkBox>div {
+    width: 560px;
+    height: 95%;
+    background: #FFF2E7;
+    border-radius: 8px;
+    padding-top: 16px;
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+
+.checkBox>div>p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF7506;
+}
+
+.checkBox>div>div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

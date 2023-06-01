@@ -136,6 +136,7 @@ const ThietBi: FC<ThietBiProps> = memo(function ThietBi(props = {}) {
         }));
         navigate('/themthietbi');
     };
+    
     return (
         <div className={classes.main}>
             <div className={classes.TopBar}>

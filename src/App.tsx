@@ -11,6 +11,8 @@ import DichVu from './components/DichVu/DichVu';
 import ThemThietBi from './components/ThietBi/ThemThietBi/ThemThietBi';
 import ChiTietThietBi from './components/ThietBi/ChiTietThietBi/ChiTietThietBi';
 import { Capso } from './components/CapSo/CapSo';
+import { BaoCao } from './components/BaoCao/BaoCao';
+import { VaiTro } from './components/VaiTro/VaiTro';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
   {
     path:"/chitietthietbi",
     element:<ChiTietThietBi/>
+  },
+  {
+    path:"/baocao",
+    element: <BaoCao />
+  },
+  {
+    path:"/vaitro",
+    element: <VaiTro />
   }
 ]);
 

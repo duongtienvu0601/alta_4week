@@ -22,3 +22,17 @@ export interface CapsoType {
     TrangThai: string,
     NguonCap: string,
 }
+export interface BaoCaoType {
+    STT: string,
+    TenDV: string,
+    ThoiGianCap: string,
+    TinhTrang: string,
+    NguonCap: string
+}
+
+export interface VaiTroType {
+    id: string;
+    TenVaiTro: string,
+    SoNgDung: number,
+    MoTa: string,
+}

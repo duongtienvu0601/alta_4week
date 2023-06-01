@@ -1,4 +1,3 @@
-import React from 'react'
 import classes from './chitiet.module.css';
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../store/store'
@@ -34,7 +33,7 @@ export const ChiTiet = () => {
     return (
         <div
             style={{
-                height: '90%'
+                height: '70%'
             }}
         >
             <p className={classes.header} >Thông tin cấp số</p>
@@ -85,13 +84,11 @@ export const ChiTiet = () => {
                         <div>
                             <p className={classes.text} >Thời gian cấp: <span>{chiTietState.ThoiGianCap}</span></p>
                         </div>
-
-                        {/* <div>
-          <p>Địa chỉ Email: <span>{chiTietState.}</span></p>
-        </div> */}
-
                         <div>
                             <p className={classes.text} >Hạn sử dụng: <span>{chiTietState.HSD}</span></p>
+                        </div>
+                        <div>
+                            <p className={classes.text}>Địa chỉ Email: <span>nguyendung@gmail.com</span></p>
                         </div>
                     </div>
                 </div>

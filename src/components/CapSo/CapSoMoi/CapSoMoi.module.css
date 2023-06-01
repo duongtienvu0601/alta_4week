@@ -1,0 +1,25 @@
+.FrameButton {
+  position: absolute;
+  width: 262px;
+  height: 48px;
+  left: 565px;
+  top: 408px;
+  display: flex;
+  flex-direction: row;
+}
+.h1 {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #ff7506;
+}
+.p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #535261;
+}
